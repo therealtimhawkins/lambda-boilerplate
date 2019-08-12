@@ -4,6 +4,7 @@
   "description": "Boilerplate for AWS Lambda Functions",
   "main": "index.js",
   "scripts": {
+    "deploy": "./build.sh LambdaFunction",
     "test": "jest"
   },
   "repository": {
