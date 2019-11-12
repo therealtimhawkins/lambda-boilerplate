@@ -1,21 +1,22 @@
 const LambdaTester = require('lambda-tester');
-const handler = require('../LambdaFunction/index').handler;
+const handler = require('../VegitableDB/index').handler;
 
 describe('handler', () => {
   it('should return message if no name is given', (done) => {
     LambdaTester(handler)
-      .event({})
+      .event({
+        "route": "addRestaurant",
+        "body": {
+          "restaurant": {
+            "name": "Nandos",
+            "coordinates": "51.5135,0.0291",
+            "postcode": "E147DX",
+            "rating": 8
+          }
+        }
+      })
       .expectResult(result => {
         expect(result.message).toEqual('Hello World!');
-      })
-      .verify(done);
-  });
-
-  it('should return message if name is given', (done) => {
-    LambdaTester(handler)
-      .event({name: 'Tim Hawkins'})
-      .expectResult(result => {
-        expect(result.message).toEqual('Hello Tim Hawkins!');
       })
       .verify(done);
   });
