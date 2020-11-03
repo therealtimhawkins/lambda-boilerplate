@@ -1,4 +1,4 @@
-# AWS Lambda Boilerplate
+<h1 align="center">⛅️ AWS Lambda Boilerplate</h1>
 
 This repo contains boilerplate code to locally develop Nodejs Lambda functions. It includes a testing framework and build file to push your code to AWS from the command line.
 
