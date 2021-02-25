@@ -25,9 +25,9 @@ exports.handler = async function (event, context, callback) {
     ContentType: "image/png",
   }
   try {
-    const { Location: location, Key: key } = await S3.upload(upload).promise()
+    const { Location: location } = await S3.upload(upload).promise()
     callback(null, { location, key })
   } catch (error) {
-    console.log(error)
+    callback(error)
   }
 }
