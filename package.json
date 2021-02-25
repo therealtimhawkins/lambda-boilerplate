@@ -19,6 +19,7 @@
   "homepage": "https://github.com/therealtimhawkins/lambda-boilerplate#readme",
   "devDependencies": {
     "jest": "^24.8.0",
-    "lambda-tester": "^3.5.0"
-  }
+    "lambda-tester": "^4.0.1"
+  },
+  "dependencies": {}
 }
