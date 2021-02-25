@@ -1,6 +1,7 @@
 const LambdaTester = require("lambda-tester")
 const handler = require("../handler/index").handler
 const fs = require("fs")
+require("dotenv").config()
 
 describe("handler", () => {
   it("should return message if no name is given", async () => {
